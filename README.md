@@ -56,6 +56,8 @@ input `-n=k` -> total `2k+1` frames (concat k frames on both sides and predict t
   `python net02.py`
 * train model 03<br>
   `python net03.py`
+
+### Testing 
 * inference(postprocessing + ensemble)<br>
   `python prediction.py`
   (you may modify the path of the checkpoints to be loaded)
