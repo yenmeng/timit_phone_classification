@@ -29,7 +29,7 @@
   `data.shape=(total_frames,feature_dim)` and `label.shape=(total_frames,)`
   * save processed training/testing data and labels to .npy<br>
   
-#### Run
+#### Run Preprocess
 extract features for each file and convert to framewise training/testing data
 * fbank(default: delta=False, delta_delta=False, apply_cmvn=True)<br>
 `python preprocess_data.py -f=fbank --extract`<br>
@@ -46,3 +46,20 @@ input `-n=k` -> total `2k+1` frames (concat k frames on both sides and predict t
 * mfcc(default: n=5, delta=True, delta_delta=True, apply_cmvn=True)<br>
 `python preprocess_data_stack.py -f=mfcc -n=k --delta=True --delta_delta=True`<br>
 `feature dim = 39*(2k+1)`
+
+---
+
+### Training
+* train model 01<br>
+  `python net01.py`
+* train model 02<br>
+  `python net02.py`
+* train model 03<br>
+  `python net03.py`
+* inference(postprocessing + ensemble)<br>
+  `python prediction.py`
+  (you may modify the path of the checkpoints to be loaded)
+* download trained checkpoints via this link:
+[checkpoints](https://drive.google.com/file/d/1rph7f1K9_GWoIQFthQ9PcpisJg-tD7Pg/view?usp=sharing)
+
+ 
