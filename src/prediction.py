@@ -103,7 +103,7 @@ class BasicBlock03(nn.Module):
         return x
 
 class Classifier03(nn.Module):
-    def __init__(self, input_dim=429, output_dim=39, hidden_layers=5, hidden_dim=2048):
+    def __init__(self, input_dim=429, output_dim=39, hidden_layers=6, hidden_dim=2048):
         super(Classifier03, self).__init__()
 
         self.fc = nn.Sequential(

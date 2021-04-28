@@ -46,7 +46,7 @@ print('Size of validation set: {}'.format(val_x.shape))
 
 """Create a data loader from the dataset, feel free to tweak the variable `BATCH_SIZE` here."""
 
-BATCH_SIZE = 256
+BATCH_SIZE = 128
 
 from torch.utils.data import DataLoader
 
@@ -90,7 +90,7 @@ class BasicBlock03(nn.Module):
 
 
 class Classifier03(nn.Module):
-    def __init__(self, input_dim=429, output_dim=39, hidden_layers=5, hidden_dim=2048):
+    def __init__(self, input_dim=429, output_dim=39, hidden_layers=6, hidden_dim=2048):
         super(Classifier03, self).__init__()
 
         self.fc = nn.Sequential(
